@@ -9,7 +9,6 @@
     <title> JavaScript: Social Media Login</title>
 </head>
 <body>
-    <h1> Hello </h1>
     <script>
         window.fbAsyncInit = function() {
             FB.init({
@@ -39,7 +38,19 @@
                 console.error('Not logged in or authenticated');
             }
         }
+
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+        
     </script>
+    <h1> Welcome to Social Login! </h1>
+    <fb:login-button 
+        scope="public_profile, email, user_birthday"
+        onlogin="checkLoginState();">
+    </fb:login-button>
     
     
 </body>
