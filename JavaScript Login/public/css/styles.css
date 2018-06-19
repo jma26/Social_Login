@@ -2,7 +2,6 @@
     text-align: center;
 }
 
-.fb-container {
-    text-align: center;
-    margin-top: 16px;
+#logout, #fb-btn {
+    display: none;
 }
