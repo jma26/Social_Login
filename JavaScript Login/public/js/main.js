@@ -5,9 +5,13 @@ function startFb() {
 }
 
 function statusChangeCallback(response) {
-    if (response.status === 'connected') {
+    if (response.status === 'connected' && response.authResponse) {
         console.log('Logged in and authenticated');
-        console.log(response);
+        let token = response.accessToken;
+        let userID = response.userID;
+        FB.api('/me', 'get', { access_token: token, fields: 'name, gender, email, birthday, picture' }, function(response) {
+            console.log(response);
+        });
         setElements(true);
     } else {
         console.error('Not logged in or authenticated');
