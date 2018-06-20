@@ -13,3 +13,9 @@ body {
 #logout, #fb-btn {
     display: none;
 }
+
+.card {
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 250px;
+}
