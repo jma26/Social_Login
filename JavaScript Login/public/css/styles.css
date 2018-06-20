@@ -1,5 +1,13 @@
+body {
+    background-color: #EEEEEE;
+}
+
 .headline {
-    text-align: center;
+    padding: 1rem 1rem;
+}
+
+.nav-link {
+    font-size: 1rem;
 }
 
 #logout, #fb-btn {
